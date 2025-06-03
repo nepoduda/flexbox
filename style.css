@@ -1,7 +1,0 @@
-.item{
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.item:hover {
-    transform: scale(1.1);
-}
