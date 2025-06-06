@@ -1,207 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Seminário: O que é Flexbox?</title>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
-  }
-
-  nav {
-    background-color: #222;
-    color: white;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover {
-    color: #1e90ff;
-  }
-
-  /* Container principal */
-  .container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-    color: #222;
-  }
-
-  p {
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
-  }
-
-  .flexbox-example {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-    margin-bottom: 2rem;
-  }
-
-  .box {
-    background-color: #1e90ff;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-align: center;
-    min-width: 80px;
-  }
-
-  .flexbox-advanced {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-  }
-
-  .flexbox-advanced .container-flex {
-    display: flex;
-    gap: 15px;
-    margin-top: 1rem;
-  }
-
-  /*justify-content */
-  .justify-content-example {
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-
-  .justify-content-example .item {
-    background-color: #ff7f50;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: 600;
-    flex: 0 0 auto;
-  }
-
-  /*flex-direction */
-  .flex-direction-example {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-top: 1rem;
-  }
-
-  .flex-direction-example .item {
-    background-color: #32cd32;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: 600;
-    flex: 0 0 auto;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 600px) {
-    .flexbox-example {
-      flex-direction: column;
-      gap: 1rem;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seminário: O que é Flexbox?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: "poppins", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
     nav ul {
-      flex-direction: column;
-      gap: 0.8rem;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
     }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1e90ff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .section-simples,
+    .section-avancado {
+      margin-bottom: 3rem;
+    }
+
+    .flexbox-simples {
+      display: flex;
+      justify-content: ;
+      align-items: flex-end;
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    }
+
+    .box {
+      background-color: #1e90ff;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .flexbox-advanced-container {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .justify-content-example,
+    .flex-direction-example {
+      display: flex;
+      gap: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .justify-content-example {
+      justify-content: ;
+    }
+
+    .justify-content-example .item {
+      background-color: #ff7f50;
+    }
+
+    .flex-direction-example {
+      flex-direction: ;
+    }
+
+    .flex-direction-example .item {
+      background-color: #32cd32;
+    }
+
+    .item {
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 600;
+      flex: 0 0 auto;
+    }
+
+  .flex-wrap-example {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    background: white;
+    margin-top: 1rem;
   }
-</style>
+
+  .wrap-item {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    flex: 0 0 120px;
+    text-align: center;
+  }
+  </style>
+
+  
 </head>
 <body>
 
-<nav>
-  <h1>Flexbox</h1>
-  <ul>
-    <li><a href="#exemplo-simples">Exemplo simples</a></li>
-    <li><a href="#exemplo-avancado">Exemplo avançado</a></li>
-  </ul>
-</nav>
+  <header>
+    <h1>Flexbox</h1>
+    <nav>
+      <ul>
+        <li><a href="#exemplo-simples">Exemplo simples</a></li>
+        <li><a href="#exemplo-avancado">Exemplo avançado</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="container">
-  </section>
-
-  <section id="exemplo-simples">
-    <h2>Exemplo simples de Flexbox</h2>
-    <div class="flexbox-example">
-      <div class="box">Item 1</div>
-      <div class="box">Item 2</div>
-      <div class="box">Item 3</div>
-    </div>
-  </section>
-
-  <section id="exemplo-avancado">
-    <h2>Exemplo avançado: propriedades Flexbox</h2>
-
-    <h3>Justify-content: espaço entre os itens</h3>
-    <div class="flexbox-advanced">
-      <div class="container-flex justify-content-example" style="justify-content: space-between; display: flex;">
-        <div class="item">Item A</div>
-        <div class="item">Item B</div>
-        <div class="item">Item C</div>
+    <section id="exemplo-simples" class="section-simples">
+      <h2>Exemplo simples de Flexbox</h2>
+      <div class="flexbox-simples">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
       </div>
-    </div>
-    <h3>Flex-direction: muda a direção dos itens</h3>
-    <div class="flexbox-advanced">
-      <div class="container-flex flex-direction-example" style="flex-direction: column; display: flex;">
-        <div class="item">Item X</div>
-        <div class="item">Item Y</div>
-        <div class="item">Item Z</div>
-      </div>
-    </div>
-    <p>A propriedade <code>flex-direction: column</code> muda a direção dos itens para vertical.</p>
-  </section>
-</div>
+    </section>
 
-<footer>
-  &copy; 2025 - Seminário Flexbox
-</footer>
+    <section id="exemplo-avancado" class="section-avancado">
+      <h2>Exemplo avançado: propriedades Flexbox</h2>
+
+      <h3>Justify-content: espaço entre os itens</h3>
+      <div class="flexbox-advanced-container">
+        <div class="justify-content-example">
+          <div class="item">Item A</div>
+          <div class="item">Item B</div>
+          <div class="item">Item C</div>
+        </div>
+      </div>
+
+      <h3>Flex-direction: muda a direção dos itens</h3>
+      <div class="flexbox-advanced-container">
+        <div class="flex-direction-example">
+          <div class="item">Item X</div>
+          <div class="item">Item Y</div>
+          <div class="item">Item Z</div>
+        </div>
+      </div>
+
+         <h3 style="padding: 1.5rem;">Flex-wrap: os itens podem quebrar linha</h3>
+    <div class="flex-wrap-example">
+      <div class="wrap-item">Wrap 1</div>
+      <div class="wrap-item">Wrap 2</div>
+      <div class="wrap-item">Wrap 3</div>
+      <div class="wrap-item">Wrap 4</div>
+      <div class="wrap-item">Wrap 5</div>
+      <div class="wrap-item">Wrap 6</div>
+      <div class="wrap-item">Wrap 7</div>
+      <div class="wrap-item">Wrap 8</div>
+      <div class="wrap-item">Wrap 9</div>
+      <div class="wrap-item">Wrap 10</div>
+      <div class="wrap-item">Wrap 11</div>
+      <div class="wrap-item">Wrap 12</div>
+    </div>
+
+    </section>
+
+
 
 </body>
 </html>
